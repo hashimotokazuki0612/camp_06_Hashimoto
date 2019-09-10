@@ -1,8 +1,8 @@
-package colLesson01;
+package ColLesson02;
 
 import java.util.Scanner;
 
-public class ColLesson01 {
+public class ColLesson02 {
     public static void main(String[] args) {
         //Scannerクラスのインスタンスの生成
         Scanner scanner = new Scanner(System.in);
@@ -17,11 +17,11 @@ public class ColLesson01 {
         while (count < 10) {
             //入力を受け取る部分
             String input = scanner.nextLine();
-            // if文を使って条件分岐（"e"が入力されたら以下を実行。それ以外が入力されたら再度入力案内を表示）
+            // if文を使って条件分岐（"e"が入力されたら結果を表示。それ以外が入力されたら再度入力案内を表示）
             if ("e".equals(input)) {//inputで入力された文字列と比較して「e」が入力されていれば以下を実行
                 //for文を使って結果を表示
                 for (int j = 0; j < count; j++) {
-                    inputs[j].outPut();
+                    System.out.println(inputs[j].toString());//toStringを呼び出し表示
                 }
                 System.out.println(count + "件、登録しました。");
             } else {
@@ -33,6 +33,7 @@ public class ColLesson01 {
                 inputs[count] = s;
                 //while文でループさせた回数をカウントするために１を足す
                 count++;
+                //次の入力を促すメッセージ
                 System.out.println("次の単語と意味を入力してください。\"e\"で終了します。");
             }
         }
