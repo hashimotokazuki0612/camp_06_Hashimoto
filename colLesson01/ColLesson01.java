@@ -11,7 +11,7 @@ public class ColLesson01 {
         int count = 0;
 
         // 入力を促すメッセージ
-        System.out.println("分からなかった単語とその意味をスペースで区切って入力してください。");
+        System.out.println("わからなかった単語とその意味をスペースで区切って入力してください。");
 
         //while文を使って文字を読み取る
         while (count < 10) {
@@ -21,7 +21,8 @@ public class ColLesson01 {
             if ("e".equals(input)) {//inputで入力された文字列と比較して「e」が入力されていれば以下を実行
                 //for文を使って結果を表示
                 for (int j = 0; j < count; j++) {
-                    inputs[j].outPut();
+                    //printlnメソッドで出力
+                    System.out.println("単語：" + inputs[j].word + " " +"意味：" + inputs[j].meaning);
                 }
                 System.out.println(count + "件、登録しました。");
             } else {

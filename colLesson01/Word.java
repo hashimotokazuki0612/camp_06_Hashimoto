@@ -10,10 +10,4 @@ public class Word {
         this.word = word;
         this.meaning = meaning;
     }
-
-    //メソッド　＝　オブジェクトの処理（振る舞い）
-    public void outPut(){
-        System.out.println("単語：" + this.word + " " +"意味：" + this.meaning);
-    }
-
 }
