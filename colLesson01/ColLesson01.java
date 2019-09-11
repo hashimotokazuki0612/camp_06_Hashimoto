@@ -1,4 +1,4 @@
-package colLesson01;
+package ColLesson01;
 
 import java.util.Scanner;
 
@@ -19,12 +19,7 @@ public class ColLesson01 {
             String input = scanner.nextLine();
             // if文を使って条件分岐（"e"が入力されたら以下を実行。それ以外が入力されたら再度入力案内を表示）
             if ("e".equals(input)) {//inputで入力された文字列と比較して「e」が入力されていれば以下を実行
-                //for文を使って結果を表示
-                for (int j = 0; j < count; j++) {
-                    //printlnメソッドで出力
-                    System.out.println("単語：" + inputs[j].word + " " +"意味：" + inputs[j].meaning);
-                }
-                System.out.println(count + "件、登録しました。");
+                break;
             } else {
                 //入力された文を全角スペースで区切る
                 String[] words = input.split("　");
@@ -37,5 +32,11 @@ public class ColLesson01 {
                 System.out.println("次の単語と意味を入力してください。\"e\"で終了します。");
             }
         }
+        //for文を使って結果を表示
+        for (int j = 0; j < count; j++) {
+            //printlnメソッドで出力
+            System.out.println("単語：" + inputs[j].word + " " +"意味：" + inputs[j].meaning);
+        }
+        System.out.println(count + "件、登録しました。");
     }
 }

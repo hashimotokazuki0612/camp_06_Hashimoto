@@ -21,18 +21,19 @@ public class ColLesson03 {
                 String input = scanner.nextLine();
                 //if文を使って条件分岐。
                 if ("e".equals(input)) {
-                    return;
+                    break;
+                }else {
+                    //入力された文を全角スペースで区切る
+                    String[] words = input.split("　");
+                    ////分割した文章を作成したWordクラスのwordとmeaningをそれぞれ代入
+                    Word s = new Word(words[0], words[1]);
+                    //wordクラスに作った配列の中に入力した単語と意味を格納
+                    inputs[count] = s;
+                    //while文でループさせた回数をカウントするために１を足す
+                    count++;
+                    //次の入力を促すメッセージ
+                    System.out.println("次の単語と意味を入力してください。\"e\"で終了します。");
                 }
-                //入力された文を全角スペースで区切る
-                String[] words = input.split("　");
-                ////分割した文章を作成したWordクラスのwordとmeaningをそれぞれ代入
-                Word s = new Word(words[0], words[1]);
-                //wordクラスに作った配列の中に入力した単語と意味を格納
-                inputs[count] = s;
-                //while文でループさせた回数をカウントするために１を足す
-                count++;
-                //次の入力を促すメッセージ
-                System.out.println("次の単語と意味を入力してください。\"e\"で終了します。");
             }
         } catch (ArrayIndexOutOfBoundsException e) {//例外が発生したら以下を表示する
             System.out.println("登録制限を超えました。登録済みのデータは以下になります。");

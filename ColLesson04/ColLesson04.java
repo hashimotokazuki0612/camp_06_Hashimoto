@@ -20,16 +20,16 @@ public class ColLesson04 {
             while (true) {
                 //入力を受け取る部分
                 String input = new java.util.Scanner(System.in).nextLine();
-                //if文で条件分岐。
+                //if文で条件分岐。もしも"e"が入力されたらループを抜けて、"finally"に移動し結果を表示
                 if ("e".equals(input)) {
-                    return;
+                    break;
                 }
                 //入力された文を全角スペースで区切る
                 String[] words = input.split("　");
-                //if文で条件分岐。(カウントが５になったら以下を表示してループを抜ける)
+                //if文で条件分岐。(カウントが５になったら以下を表示してループを抜けて、"fainallyに移動し結果を表示")
                 if (count == 5) {
                     System.out.println("登録制限を超えました。登録済みのデータは以下になります。");
-                    return;
+                    break;
                 } else {
                     //wordクラスに作った配列の中に入力した単語と意味をそれぞれ格納
                     word_array.add(new Word(words[0], words[1]));

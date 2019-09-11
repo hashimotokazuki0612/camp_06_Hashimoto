@@ -1,4 +1,4 @@
-package colLesson01;
+package ColLesson01;
 
 public class Word {
 //フィールド　＝　オブジェクトが持つデータ
